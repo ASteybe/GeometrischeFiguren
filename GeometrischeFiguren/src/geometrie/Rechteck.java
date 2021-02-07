@@ -27,7 +27,7 @@ public class Rechteck extends Figur2D
 		this.laenge = laenge;
 	} 
 	
-	//Konstruktor
+	//Konstruktor(en)
 	public Rechteck (Punkt bezug, int b, int l)
 	{
 		super(b, l);
@@ -48,6 +48,15 @@ public class Rechteck extends Figur2D
 	public boolean umfangKleinerAls (Figur2D f)
 	{
 		return false;
+	}
+	//OBJECT METHODEN
+	public double umfang () 
+	{
+		return 12;
+	}
+	public double flaeche ()
+	{
+		return 14;
 	}
 	
 	
