@@ -55,13 +55,13 @@ public class Punkt
 	}
 	public void verschieben ( int deltaX, int deltaY)
 	{
-		xKoordinate = xKoordinate + deltaX;
-		yKoordinate = yKoordinate + deltaY;
+		this.xKoordinate = getX_Koordinate() + deltaX;
+		this.yKoordinate = getY_Koordinate() + deltaY;
 	}
 	public boolean equals ( Punkt p1)
 	{
-		// Ueberprüfung der inhaltlichen Gleichheit zweier Objekte
-		return false;
+		// Ueberpruefung der inhaltlichen Gleichheit zweier Objekte
+		return (p1.getX_Koordinate() == this.xKoordinate && p1.getY_Koordinate() == this.yKoordinate);
 	}
 	
 	
