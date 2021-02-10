@@ -34,9 +34,7 @@ public class Gerade
 	//OBJEKTMETHODEN
 	public double laenge ()
 	{
-		double leange;
-		leange = endPos.getX_Koordinate() - startPos.getX_Koordinate();
-		return laenge();
+		return ( this.endPos.getX_Koordinate() - this.startPos.getX_Koordinate() );
 	}
 	
 	public boolean istLaengerAls (Gerade g2)

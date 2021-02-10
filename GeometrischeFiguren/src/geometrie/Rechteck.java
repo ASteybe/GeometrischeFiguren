@@ -30,14 +30,26 @@ public class Rechteck extends Figur2D
 	//Konstruktor(en)
 	public Rechteck (Punkt bezug, int b, int l)
 	{
-		super(b, l);
-		breite = bezug.getX_Koordinate();
-		laenge = bezug.getY_Koordinate();
+		super(b, l);	//Konstruktor Aufruf Superklasse (Figur2D)
+		this.breite = bezug.getX_Koordinate();
+		this.laenge = bezug.getY_Koordinate();
 	}
-	//Objekt - Methoden 
+	//OBJECT METHODEN
+	public double umfang () 
+	{
+		return (2*this.breite) + (2*this.laenge); 
+	}
+	
+	public double flaeche ()
+	{
+		return (this.breite) * (this.laenge); 
+	}
+	
 	public double diagonalenLaenge ( )
 	{
-		return 12;
+		// a² + b² = c²    ² --> ALT(festhalten) + 253
+		// c --> Diagonale
+		return Math.sqrt (Math.pow(this.breite,2) + Math.pow(this.laenge,2));
 	}
 	
 	public boolean flaecheKleinerAls (Figur2D f)
@@ -49,16 +61,5 @@ public class Rechteck extends Figur2D
 	{
 		return false;
 	}
-	//OBJECT METHODEN
-	public double umfang () 
-	{
-		return 12;
-	}
-	public double flaeche ()
-	{
-		return 14;
-	}
-	
-	
 	
 }

@@ -24,8 +24,8 @@ public abstract class Figur2D
 	
 	public Figur2D (int bezugX, int bezugY)
 	{
-		bezug.setX_Koordinate(bezugX);
-		bezug.SetY_Koordinate(bezugY);
+		this.bezug.setX_Koordinate(bezugX);
+		this.bezug.SetY_Koordinate(bezugY);
 	}
 	
 	//ABSTRAKTE METHODEN
