@@ -14,6 +14,14 @@ public abstract class Figur3D
 	{
 		this.boden = boden;
 	}
+	//Konstruktor
+	public Figur3D (Figur2D f)
+	{
+		this.boden = f;
+	}
 	
+	//ABSTRAKTE METHODEN
+	public abstract double volumen ();
+	public abstract double oberflaeche ();
 	
 }

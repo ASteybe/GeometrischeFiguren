@@ -54,12 +54,12 @@ public class Rechteck extends Figur2D
 	
 	public boolean flaecheKleinerAls (Figur2D f)
 	{
-		 return flaeche() < f.flaeche();
+		 return this.flaeche() < f.flaeche();
 	}
 	
 	public boolean umfangKleinerAls (Figur2D f)
 	{
-		return umfang() < f.umfang();
+		return this.umfang() < f.umfang();
 	}
 	
 }
