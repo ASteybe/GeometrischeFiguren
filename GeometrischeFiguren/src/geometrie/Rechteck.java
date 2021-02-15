@@ -2,11 +2,11 @@ package geometrie;
 
 public class Rechteck extends Figur2D 
 {
-	//Objektattribute
+	//Objekt Attribute
 	private int breite; 
 	private int laenge;
 	
-	//Getter und Setter Methoden
+	//Getter und Setter
 	public int getBreite() 
 	{
 		return breite;
@@ -27,14 +27,14 @@ public class Rechteck extends Figur2D
 		this.laenge = laenge;
 	} 
 	
-	//Konstruktor(en)
+	//Konstruktoren
 	public Rechteck (Punkt bezug, int b, int l)
 	{
 		super(b, l);	//Konstruktor Aufruf Superklasse (Figur2D)
 		this.breite = bezug.getX_Koordinate();
 		this.laenge = bezug.getY_Koordinate();
 	}
-	//OBJECT METHODEN
+	//Objekt Methoden
 	public double umfang () 
 	{
 		return (2*this.breite) + (2*this.laenge); 
@@ -47,19 +47,19 @@ public class Rechteck extends Figur2D
 	
 	public double diagonalenLaenge ( )
 	{
-		// a² + b² = c²    ² --> ALT(festhalten) + 253
+		// aï¿½ + bï¿½ = cï¿½    ï¿½ --> ALT(festhalten) + 253
 		// c --> Diagonale
 		return Math.sqrt (Math.pow(this.breite,2) + Math.pow(this.laenge,2));
 	}
 	
 	public boolean flaecheKleinerAls (Figur2D f)
 	{
-		return false;
+		 return flaeche() < f.flaeche();
 	}
 	
 	public boolean umfangKleinerAls (Figur2D f)
 	{
-		return false;
+		return umfang() < f.umfang();
 	}
 	
 }

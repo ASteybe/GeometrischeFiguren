@@ -2,7 +2,7 @@ package geometrie;
 
 public class Kreis extends Figur2D 
 {
-	//Klassenattribute
+	//Klassen Attribute
 	private static int DEFAULT_RADIUS = 5;
 	
 	//Objekt Attribute
@@ -35,14 +35,14 @@ public class Kreis extends Figur2D
 	{
 		super(bezug);
 	}
-	//OBJECT METHODEN
+	//Objekt Methoden
 	public double umfang ()
 	{
-		return 12;
+		return 2 * Math.PI * getRadius();
 	}
 	public double flaeche ()
 	{
-		return 12;
+		return Math.PI * Math.pow(getRadius(), 2);	//PI * r2
 	}
 	
 	
