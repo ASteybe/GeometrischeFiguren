@@ -15,22 +15,42 @@ public class Quader extends Figur3D
 	{
 		this.hoehe = hoehe;
 	}
-
+	
+	///////////////////////////////////////////////////////
+	
+	//Wird benoetigt um auf die Breite bzw. Länge des Rechtecks zugreifen zu koennen 
+	public Rechteck getBoden ()
+	{
+		Figur2D myBoden = super.getBoden2D();
+		return (Rechteck) myBoden; 
+	}
+	
+	public void setBoden (Rechteck boden)
+	{
+		super.setBoden(boden);
+	}
+	///////////////////////////////////////////////////////
+	
 	//Konstruktoren
 	public Quader (Rechteck r, int hoehe)
 	{
 		super(r);
-		this.hoehe = hoehe;
+		this.setHoehe(hoehe);
 	}
 	//Objetkt Methoden
 	public double volumen ()
-	{
-		return 12;
+	{	
+		// Volumen = Fläche * hoehe
+		return this.getBoden2D().flaeche() * this.hoehe;
 	}
-	
+
 	public double oberflaeche ()
 	{
-		return 12;
+		//Oberfläche = 2 * A1 + 2 * A2 + 2 * A3
+		int l = this.getBoden().getLaenge();
+		int b = this.getBoden().getBreite();
+		
+		return 2 * l * b + 2 * l * this.hoehe + 2 * b * this.hoehe;
 	}
 	
 	public double leangeRaumdiagonale ()
