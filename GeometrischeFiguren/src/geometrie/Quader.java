@@ -63,6 +63,10 @@ public class Quader extends Figur3D
 	
 	public static boolean istWuerfel (Object o)
 	{
+		if (o instanceof Quader)	
+		{
+			
+		}
 		return false;
 	}
 	
