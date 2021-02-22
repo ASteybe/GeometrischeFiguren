@@ -1,5 +1,6 @@
 package geometrie;
 
+
 public class Quader extends Figur3D
 {
 	//Objekt Attribute
@@ -54,8 +55,10 @@ public class Quader extends Figur3D
 	}
 	
 	public double leangeRaumdiagonale ()
-	{
-		return 12;
+	{	
+		int a = this.getBoden().getLaenge();
+        int b = this.getBoden().getBreite();
+        return Math.sqrt(Math.pow(a, 2) + Math.pow(b, 2) + Math.pow(this.hoehe, 2));
 	}
 	
 	public static boolean istWuerfel (Object o)
