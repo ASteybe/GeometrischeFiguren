@@ -63,9 +63,18 @@ public class Quader extends Figur3D
 	
 	public static boolean istWuerfel (Object o)
 	{
+		if ( o == null)
+		{
+			return false;
+		}
 		if (o instanceof Quader)	
 		{
-			
+			Quader q = (Quader) o;
+			Rechteck r = q.getBoden();
+			if (q.hoehe == r.getLaenge() && q.hoehe == r.getBreite())
+			{
+				return true;
+			}
 		}
 		return false;
 	}
